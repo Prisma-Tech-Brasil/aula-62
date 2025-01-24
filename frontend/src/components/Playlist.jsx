@@ -2,12 +2,11 @@ import hearth from "../assets/hearth-liked.svg";
 import musics from "../mocks/music";
 
 export default function Playlist({ showPlaylist }) {
-  if (!showPlaylist) {
-    return null;
-  }
+  // Esconde Playlist apenas em telas pequenas e se `showPlaylist` for false
+  const isHidden = !showPlaylist ? "hidden lg:flex" : "flex";
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className={`${isHidden} flex-col gap-4`}>
       {musics.map((music, index) => (
         <div key={index} className="flex flex-row justify-between gap-2">
           <div className="flex flex-row gap-2">

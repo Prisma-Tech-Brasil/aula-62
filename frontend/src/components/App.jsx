@@ -12,9 +12,15 @@ export default function App() {
 
   return (
     <>
-      <Header handleShowMusic={handleShowMusic} title="Tocando Agora" />
-      <Playlist showPlaylist={!showProgressBar} />
-      <NowPlaying showProgressBar={showProgressBar} />
+      <Header
+        showPlaylist={!showProgressBar}
+        handleShowMusic={handleShowMusic}
+        title="Tocando Agora"
+      />
+      <main className="flex flex-col   lg:flex-row-reverse lg:justify-between gap-4">
+        <Playlist showPlaylist={!showProgressBar} />
+        <NowPlaying showProgressBar={showProgressBar} />
+      </main>
     </>
   );
 }
