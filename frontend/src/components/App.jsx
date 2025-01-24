@@ -17,7 +17,7 @@ export default function App() {
         handleShowMusic={handleShowMusic}
         title="Tocando Agora"
       />
-      <main className="flex flex-col   lg:flex-row-reverse lg:justify-between gap-4">
+      <main className="flex flex-col justify-center lg:flex-row-reverse lg:justify-between gap-4">
         <Playlist showPlaylist={!showProgressBar} />
         <NowPlaying showProgressBar={showProgressBar} />
       </main>
